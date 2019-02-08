@@ -1,0 +1,41 @@
+html {
+    background-color: lightpink;
+    
+}
+
+p {
+    border: 0.5px solid skyblue;
+    padding: 50px;
+    margin: 50px;
+    font-family: lato;
+    font-size: 45px;
+    text-align: center;
+    font-weight: 800;
+    background-color: light pink;
+
+  }
+  
+ h1{
+     font-size: 20px;
+     font-family: lato;
+     justify-content: left;
+     text-align: left;
+     width: 400px;
+     padding: 20px;
+ } 
+  
+  .container {
+      border: 0.5px solid skyblue;
+      padding: 10px;
+      margin: auto;
+      justify-content: space-around;
+
+    }
+
+  .container {
+      display: flex;
+      justify-content: space-around;
+      justify-items: auto;
+      flex-wrap: wrap;
+      margin: 10px;
+    }
