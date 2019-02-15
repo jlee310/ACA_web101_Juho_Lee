@@ -4,28 +4,29 @@
 
 html {
 	font-size: 18px;
-  font-family: Avenir;
-  background-color: palegoldenrod
+  	font-family: Avenir;
+ 	 background-color: palegoldenrod
 }
 
 body {
 	font-size: 16px;
 	padding: 26px;
-  margin: 0px;
+  	margin: 0px;
 
 }
 
 .wrapper {
-	height: 1050px;
+	height: 1000px;
 	display: grid;
-	grid-template-columns: 160px 160px 160px 160px;
-  	grid-template-rows: 150px 400px 500px;
+	grid-template-columns: auto auto;
+  	grid-template-rows: auto au;
 	grid-template-areas:
-		"header 		header 	header 	header"
-		"sidebar 	sidebar 		main 		main"
-		"footer 	footer 	footer	footer";
-	max-width: 640px;
-	width: 100%;
+		"header 	header"
+		"sidebar    main"
+		"footer 	footer";
+	max-width: 800px;
+	max-height: auto;
+	width: auto;
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid #ccc;
@@ -33,36 +34,43 @@ body {
 
 .header {
 	grid-area: header;
-	padding: 16px;
-  border-bottom: 1px solid #ccc;
-  font-family: avenir;
-  font-size: 40px;
-  text-align: center;
-  margin-top: 40px;
+	border-bottom: 1px solid #ccc;
+	font-family: avenir;
+	font-size: 40px;
+	text-align: center;
 }
 
 .main {
 	grid-area: main;
-  padding: 16px;
-  margin-left: 20px;
-  font-family: avenir;
-  font-size: 20px;
-  text-align: left;
-  margin-top: 20px;
+	padding: 16px;
+	margin-left: 20px;
+	font-family: avenir;
+	font-size: 20px;
+	text-align: left;
+	margin-top: 15px;
 }
 
 .aside {
 	grid-area: sidebar;
-	padding: 16px;
-  border-right: 1px solid #ccc;
-  font-family: avenir;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
+	padding: 10px;
+	border-right: 1px solid #ccc;
+	font-family: avenir;
+    font-size: 20px;
+	text-align: center;
+    margin-top: 15px;
+}
+
+ /* Calendar box border line */
+ .footer {
+	grid-area: footer;
+	/* padding: 200px; */
+	border-top: 1px solid #ccc;
+	font-family: avenir;
+	font-size: 20px;
+	text-align: left;
 }
 
   .clock {
-
     border-radius: 20%;
     background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;
     background-size: 48%;
@@ -148,26 +156,15 @@ body {
     animation: rotate 60s infinite steps(60);
   }
 
-.footer {
-	grid-area: footer;
-  padding: 200px;
-  margin-left: auto;
-  border-top: 1px solid #ccc;
-  font-family: avenir;
-  font-size: 20px;
-  text-align: left;
-  margin-top: 20px;
-
-
-}
-
+ 
+/* Calendar container */
 .container {
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: center;
-    margin: 0 auto;
-    max-width: 600px;
+    margin: auto;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -176,15 +173,19 @@ body {
     border-radius: 4px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     height: 501px;
-  perspective: 1000;
+  	perspective: 1000;
     transition: .9s;
     transform-style: preserve-3d;
-    width: 1200px;
+	width: 1200px;
 }
 
 /* Front - Calendar */
 .front {
     transform: rotateY(0deg);
+}
+
+.current-month {
+    color: #dfebed;
 }
 
 .current-date {
@@ -196,7 +197,7 @@ body {
 
 .current-date h1 {
     color: #dfebed;
-    font-size: 8px;
+    font-size: 6px;
     font-weight: 300;
 }
 
@@ -204,6 +205,7 @@ body {
     color: #dfebed;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
     font-weight: 600;
     padding: 30px 40px;
 }
@@ -223,7 +225,7 @@ body {
 
 .weeks div {
     display: flex;
-    font-size: 1.2em;
+    font-size: 18px;
     font-weight: 300;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -255,58 +257,12 @@ body {
 .event:after {
     content: '•';
     color: #f78536;
-    font-size: 1.4em;
+    font-size: 18px;
     position: absolute;
     right: -4px;
     top: -4px;
 }
 
-/* Back - Event form */
-
-.back {
-    height: 100%;
-    transform: rotateY(180deg);
-}
-
-.back input {
-    background: none;
-    border: none;
-    color: #dfebed;
-    font-size: 1.4em;
-    font-weight: 300;
-    padding: 30px 40px;
-    width: 100%;
-}
-
-.info {
-    color: #dfebed;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    font-size: 5px;
-    padding: 30px 40px;
-}
-
-.info div:not(.observations) {
-    margin-bottom: 40px;
-}
-
-.info span {
-    font-weight: 300;
-}
-
-.info .date {
-    display: flex;
-    justify-content: space-between;
-}
-
-.info .date p {
-    width: 50%;
-}
-
-.info .address p {
-    width: 100%;
-}
 
 .actions {
     bottom: 0;
@@ -354,7 +310,7 @@ body {
 }
 
 
-@media (max-width: 575px) {
+@media (max-width: 675px) {
 	.wrapper {
 		display: flex;
 		flex-direction: column;
@@ -363,13 +319,39 @@ body {
 		order: 1;
 	}
 	.main {
-		order: 2;
+        order: 2;
+        max-width: 200px;
 	}
 	.aside {
 		order: 3;
 		border-right: 0;
-		border-top: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        max-width: auto;
 	}
+
+	/* .container {
+		order: 4;
+		align-items: center;
+		display: flex;
+		height: auto;
+		justify-content: center;
+		margin: 0 auto;
+		max-width: 200px;
+		width: auto;
+	}
+	
+	.calendar {
+		order: 5;
+		background: #2b4450;
+		border-radius: 4px;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+		height: 501px;
+		  perspective: 1000;
+		transition: .9s;
+		transform-style: preserve-3d;
+		width: 1200px;
+	} */
+
 	.footer {
 		order: 4;
 	}
