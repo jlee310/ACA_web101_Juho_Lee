@@ -184,6 +184,10 @@ body {
     transform: rotateY(0deg);
 }
 
+.current-month {
+    color: #dfebed;
+}
+
 .current-date {
     border-bottom: 1px solid rgba(73, 114, 133, .6);
     display: flex;
