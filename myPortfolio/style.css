@@ -52,7 +52,7 @@ body {
     width: 100%;
   }
   
-  #profile-pic {
+  .profile-pic {
     width: 500px;
     height: 500px;
     border-radius: 50%;
