@@ -1,0 +1,74 @@
+#square > div {
+    -webkit-transition: scale(1.1,1.1);
+    -moz-transition: scale(1.1,1.1);
+    -o-transition: scale(1.1,1.1);
+    -ms-transition: scale(1.1,1.1);
+    transition: scale(1.1,1.1);
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+  }
+
+  #square {
+      width: 10%;
+      margin: 0 auto;
+
+  }
+  .blue {
+    border: 2px solid blue;
+  }
+  .red{
+    border: 2px solid red;
+  }
+  .yellow{
+    border: 2px solid yellow;
+  }
+  .purple{
+    border: 2px solid purple;
+  }
+  .brown{
+    border: 2px solid brown;
+  }
+  .pink{
+    border: 2px solid pink;
+  }
+  .darkblue{
+    border: 2px solid darkblue;
+  }
+  .orange{
+    border: 2px solid orange;
+  }
+  .green{
+    border: 2px solid green;
+  }
+  .lemon{
+    border: 2px solid lemonchiffon;
+  }
+  .salmon{
+    border: 2px solid salmon;
+  }
+  .gray{
+    border: 2px solid gray;
+  }
+
+
+  div:hover div:nth-child(odd) {
+    -webkit-transform: scale(1.5,1.5) translate(100px) rotate(360deg);
+    -moz-transform: scale(1.5,1.5) translate(100px) rotate(360deg);
+    -o-transform: scale(1.5,1.5) translate(100px) rotate(360deg);
+    -ms-transform: scale(1.5,1.5) translate(100px) rotate(360deg);
+    transform: scale(1.5,1.5)translate(100px) rotate(360deg);
+    transition: all 3s;
+    margin-bottom: 50px;
+    
+  }
+  
+  div:hover div:nth-child(even) {
+    -webkit-transform: scale(0.5,0.5) translate(-100px) rotate(360deg);
+    -moz-transform: scale(0.5,0.5) translate(-100px) rotate(360deg);
+    -o-transform: scale(0.5,0.5) translate(-100px) rotate(360deg);
+    -ms-transform: scale(0.5,0.5) translate(-100px) rotate(360deg);
+    transform: scale(0.5,0.5) translate(-100px) rotate(360deg);
+    transition: all 3s;
+    margin-bottom: 50px;
+  }
